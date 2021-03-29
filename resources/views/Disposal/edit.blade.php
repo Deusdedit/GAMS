@@ -61,7 +61,7 @@
 
                                         <div class="form-group">
                                             <label for="dateId">Price</label>
-                                            <input type="number" class="form-control" id="assetId" placeholder="Enter disposal price" value="{{$disposed->price}}" name="price">
+                                            <input type="number" min="0 " class="form-control" id="assetId" placeholder="Enter disposal price" value="{{$disposed->price}}" name="price">
                                         </div>
                                         
                                     </div>   
