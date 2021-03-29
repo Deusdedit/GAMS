@@ -85,6 +85,11 @@
                                                 <option value="Refurbished">Refurbished</option>
                                             </select>
                                         </div>
+                                        <div class="">
+                                            
+                                            <input type="checkbox" id="vatId" name="vat"  >
+                                            <label for="costId">VAT Inclusive</label>
+                                        </div>
                                         <div class="form-group">
                                             <label for="costId">Unit Cost</label>
                                             <input type="number" class="form-control" id="costId" placeholder="Enter item unit cost" value="{{$received->cost}}" name="cost" onkeyup="receiving()">
@@ -168,12 +173,6 @@
                     required: "Please enter supplier",
                 },
                 
-                // password: {
-                //     required: "Please provide a password",
-                //     minlength: "Your password must be at least 5 characters long"
-                // },
-                // terms: "Please accept our terms"
-            },
                 errorElement: 'span',
                 errorPlacement: function (error, element) {
                 error.addClass('invalid-feedback');
@@ -190,16 +189,26 @@
     </script>
 
 <script>
- function receiving()
+function receiving()
     {
         var textquantity = document.getElementById('quantityId').value;
         var textcost = document.getElementById('costId').value;
+        var checkBox = document.getElementById("vatId");
 
-        var total = parseInt(textquantity) * parseInt(textcost);
-        if(!isNaN(total))
-        {
-            document.getElementById('totalcostId').value = total;
-        }
+        if(checkBox.checked == true)
+          {
+                var total = parseInt(textquantity) * parseInt(textcost)*1.18;
+                if(!isNaN(total))
+                 {
+                      document.getElementById('totalcostId').value = total;
+                 }
+         }else{
+                  var total = parseInt(textquantity) * parseInt(textcost);
+                  if(!isNaN(total))
+                 {
+                     document.getElementById('totalcostId').value = total;
+                 }
+              }
     }
 </script>
     

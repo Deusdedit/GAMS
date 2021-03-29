@@ -168,19 +168,29 @@
                                             <input type="number" class="form-control" id="quantityId" placeholder="Enter quantity" name="quantity" onkeyup="receiving()">
                                         </div>
 
+                                        <div class="">
+                                            
+                                            <input type="checkbox" id="vatId" name="vat"  >
+                                            <label for="costId">VAT Inclusive</label>
+                                        </div>
+
                                         <div class="form-group">
                                             <label for="costId">Unit Cost</label>
                                             <input type="number" class="form-control" id="costId" placeholder="Enter unit cost" name="cost" onkeyup="receiving()" >
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="costId">Date Received</label>
-                                            <input type="date" class="form-control" id="costId" placeholder="Enter received date" name="date"  >
-                                        </div>
+                                        
+
 
                                     </div>
 
                                     <div class="col-6">
+
+                                    <div class="form-group">
+                                            <label for="costId">Date Received</label>
+                                            <input type="date" class="form-control" id="costId" placeholder="Enter received date" name="date"  >
+
+                                        </div>
                                        
                                         <div class="form-group">
                                             <label for="ledgerNumberId">Receipt Voucher Number</label>
@@ -224,17 +234,30 @@
 
 @section('pagescripts')
 <script>
- function receiving()
+
+function receiving()
     {
         var textquantity = document.getElementById('quantityId').value;
         var textcost = document.getElementById('costId').value;
+        var checkBox = document.getElementById("vatId");
 
-        var total = parseInt(textquantity) * parseInt(textcost);
-        if(!isNaN(total))
-        {
-            document.getElementById('totalcostId').value = total;
-        }
+        if(checkBox.checked == true)
+          {
+                var total = parseInt(textquantity) * parseInt(textcost)*1.18;
+                if(!isNaN(total))
+                 {
+                      document.getElementById('totalcostId').value = total;
+                 }
+         }else{
+                  var total = parseInt(textquantity) * parseInt(textcost);
+                  if(!isNaN(total))
+                 {
+                     document.getElementById('totalcostId').value = total;
+                 }
+              }
     }
+
+ 
 </script>
 
 <!-- DataTables -->
