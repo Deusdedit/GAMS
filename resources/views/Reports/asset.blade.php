@@ -34,20 +34,24 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
+                    <th>Ledger Folio Number</th>
                     <th>Asset name</th>
                     <th>Serial number</th>
+                    <th>Unit Cost </th>
                     <th>Condition </th>
                     <th>Purchased date</th>
                     <th>Received as</th>
-                    <th>Ledger number </th>
-                    <th>Cost </th>
+                    
+                    
                   </tr>
                   </thead>
                   <tbody>
                   @foreach($assets as $asset)
                   <tr>
+                    <td>{{$asset->ledger_folio}}</td>
                     <td>{{$asset->name}}</td>
                     <td>{{$asset->serial_number}}</td>
+                    <td>{{ number_format($asset->cost, 2, '.' , ',')}}</td>
                     <td>{{$asset->condition}}</td>
                     <td>{{$asset->purchased_date}}</td>
                     <td>
@@ -57,21 +61,7 @@
                             @endif
                         @endforeach
                     </td>
-                    <td>
-                        @foreach($receivings as $received)
-                            @if($asset->receiving_id == $received->id)
-                                {{$received->ledger_number}}
-                            
-                            @endif
-                        @endforeach
-                    </td> 
-                    <td>
-                        @foreach($receivings as $received)
-                            @if($asset->receiving_id == $received->id)
-                                {{ number_format($received->cost, 2, '.' , ',') }}
-                            @endif
-                        @endforeach
-                    </td>                    
+                               
                   </tr>
 
                   @endforeach

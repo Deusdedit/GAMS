@@ -34,7 +34,9 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Asset name</th>
+                  <th>Ledger Folio Number</th>
+                  <th>Asset name</th>
+            
                     <th>Purchased date</th>
                     <th>Condition</th>
                     <th>Serial number</th>
@@ -46,9 +48,10 @@
                   <tr>
                     <td>
                         <a href="{{ route('asset.show', $asset->id)}}" >
-                            <u> {{$asset->name}} </u>
+                            <u> {{$asset->ledger_folio}} </u>
                         </a>
                     </td>
+                    <td>{{$asset->name}}</td>
                     <td>{{$asset->purchased_date}}</td>
                     <td>{{$asset->condition}}</td>
                     <td>{{$asset->serial_number}}</td>
