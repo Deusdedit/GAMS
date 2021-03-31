@@ -155,16 +155,16 @@
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-                                            <label for="ledgerNumberId">Receipt Voucher Number</label>
+                                            <label for="ledgerNumberId">Receipt Voucher Number *</label>
                                             <input type="text" class="form-control" id="ledgerNumberId" placeholder="Enter receipt vocher number" name="receipt_vocher">
                                         </div>
                                         <div class="form-group">
-                                            <label for="itemNameId">Item Name</label>
+                                            <label for="itemNameId">Item Name  *</label>
                                             <input type="text" class="form-control" id="itemNameId" placeholder="Enter item name" name="item">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="quantityId">Quantity</label>
+                                            <label for="quantityId">Quantity  *</label>
                                             <input type="number" class="form-control" id="quantityId" placeholder="Enter quantity" name="quantity" onkeyup="receiving()">
                                         </div>
                                     </div>
@@ -172,18 +172,18 @@
                                     <div class="col-6">
 
                                         <div class="form-group">
-                                            <label for="costId">Date Received</label>
+                                            <label for="costId">Date Received  *</label>
                                             <input type="date" class="form-control" id="costId" placeholder="Enter received date" name="date"  >
 
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="supplierId">Supplier Name</label>
+                                            <label for="supplierId">Supplier Name  *</label>
                                             <input type="text" class="form-control" id="supplierId" placeholder="Enter Suppliers name" name="supplier">
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Condition</label>
+                                            <label>Condition  *</label>
                                             <select class="form-control select2" style="width: 100%;" name="condition">
                                                 <option selected="selected" disabled>Select a condition...</option>
                                                 <option value="New">New</option>

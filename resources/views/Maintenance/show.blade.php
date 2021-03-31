@@ -60,7 +60,7 @@
                     </tr>
                     <tr>
                       <td><b>Cost </b></td>
-                      <td>{{$maintenanced->cost}}</td>
+                      <td>{{number_format($maintenanced->cost, 2, '.' , ',') }}</td>
                     </tr>
                     
                     @foreach($vehicles as $vehicle)

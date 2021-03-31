@@ -60,7 +60,7 @@
                     </tr>
                     <tr>
                       <td><b>Unit cost</b></td>
-                      <td>{{$assets->cost}}</td>
+                      <td>{{ number_format($assets->cost, 2, '.' , ',') }}</td>
                     </tr>
                     @foreach($receivings as $receiving)
                         @if(($receiving->id) == ($assets->receiving_id) )

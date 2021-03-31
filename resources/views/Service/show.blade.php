@@ -64,7 +64,7 @@
                     </tr>
                     <tr>
                       <td><b>Cost </b></td>
-                      <td>{{$serviced->cost}}</td>
+                      <td>{{number_format($serviced->cost, 2, '.' , ',') }}</td>
                     </tr>
                     
                     @foreach($vehicles as $vehicle)

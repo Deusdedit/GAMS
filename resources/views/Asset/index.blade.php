@@ -159,7 +159,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="assetNameId">Asset name</label>
+                                                    <label for="assetNameId">Asset name */</label>
                                                     <input type="text" class="form-control" id="assetNameId" value="{{$asset->id}}" name="asset_id" hidden >
                                                     <input type="text" class="form-control" id="assetNameId" value="{{$asset->name}}" disabled >
                                                 </div>
@@ -167,19 +167,19 @@
                                                
 
                                                 <div class="form-group">
-                                                    <label for="dateId">Reason</label>
+                                                    <label for="dateId">Reason */</label>
                                                     <input type="text" class="form-control" id="statusId" placeholder="Enter Reason" name="reason">
                                                 </div>
                                             </div>
 
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label for="dateId">Disposal Date</label>
+                                                    <label for="dateId">Disposal Date */</label>
                                                     <input type="date" class="form-control" id="disposalId" placeholder="Enter Disposal Date" name="date">
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="dateId">Price</label>
+                                                    <label for="dateId">Price */</label>
                                                     <input type="number" min="0" class="form-control" id="assetId" placeholder="Enter Asset price" name="price">
                                                 </div>
                                             </div>   
@@ -218,11 +218,11 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                     <div class="form-group">
-                                            <label for="AssetSerialId">Ledger Folio Number</label>
+                                            <label for="AssetSerialId">Ledger Folio Number *</label>
                                             <input type="text" class="form-control" id="AssetSerialId" placeholder="Enter asset serial number" name="ledger_folio">
                                         </div>
                                     <div class="form-group">
-                                            <label>Asset condition</label>
+                                            <label>Asset condition *</label>
                                             <select class="form-control select2" style="width: 100%;" name="condition">
                                                 <option selected="selected" disabled>Select a condition...</option>
                                                 <option value="New">New</option>
@@ -240,7 +240,7 @@
                                             </select>
                                         </div>    
                                         <div class="form-group">
-                                            <label for="assetNameId">Asset name</label>
+                                            <label for="assetNameId">Asset name *</label>
                                             <input type="text" class="form-control" id="assetNameId" placeholder="Enter Asset name" name="name">
                                         </div>
                                         <div class="form-group">
@@ -251,7 +251,7 @@
 
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label>Category</label>
+                                            <label>Category *</label>
                                             <select class="form-control select2" style="width: 100%;" name="category">
                                                 <option selected="selected" disabled>Select asset category...</option>
                                                 <option value="Furniture and fitting">Funiture and Fitings</option>
@@ -268,23 +268,23 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="locationId">Location</label>
+                                            <label for="locationId">Location *</label>
                                             <input type="text" class="form-control" id="locationId" placeholder="Enter Asset Location" name="location">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="activityId">Activity</label>
+                                            <label for="activityId">Activity *</label>
                                             <input type="text" class="form-control" id="activityId" placeholder="Enter Activity" name="activity" >
                                         </div>
                                         <div class="form-group">
-                                            <label for="AssetSerialId">Unit cost</label>
+                                            <label for="AssetSerialId">Unit cost *</label>
                                             <input type="text" class="form-control" id="AssetSerialId" placeholder="Enter asset serial number" name="cost">
                                         </div>
                                         
                                     </div>   
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label for="dateId">Date bought</label>
+                                            <label for="dateId">Date bought *</label>
                                             <input type="date" class="form-control" id="dateId" placeholder="Enter Date bought" name="purchased_date">
                                         </div>
                                     </div>
