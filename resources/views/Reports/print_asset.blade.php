@@ -37,7 +37,7 @@
                 <td>{{$asset->ledger_folio}}</td>
                 <td>{{$asset->name}}</td>
                 <td>{{$asset->serial_number}}</td>
-                <td>{{ number_format($asset->cost, 2, '.' , ',')}}</td>
+                <td style="text-align: right;">{{ number_format($asset->cost, 2, '.' , ',')}}</td>
                 <td>{{$asset->condition}}</td>
                 <td>{{$asset->purchased_date}}</td>
                 <td>
