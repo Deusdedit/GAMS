@@ -64,9 +64,10 @@
 
                         @if ( Auth::user()->role_id == '5')
                             <div class="col-md-3">
+                                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-smm{{$asset->id}}">Edit</button>
                                 <!-- <a href="{{ route('asset.edit', $asset->id) }}"> -->
                                 <!-- <a href="{{ route('editReason', $asset->id) }}"> -->
-                                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-smm{{$asset->id}}">Edit</button>
+                                
                                 <!-- </a> -->
                             </div>
                             <div class="col-md-3">
