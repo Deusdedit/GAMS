@@ -70,8 +70,8 @@
                             </tr>
                             
                             <tr>
-                                <td><b>Receiving cost was</b></td>
-                                <td>{{ number_format($receiving->cost, 2, '.' , ',') }}</td>
+                                <td><b>Receipt voucher number was</b></td>
+                                <td>{{ $receiving->receipt_vocher }}</td>
                             </tr>
                         @endif
                     @endforeach
