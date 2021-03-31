@@ -14,7 +14,7 @@ class ChangeLedgerFolioToAssets extends Migration
     public function up()
     {
         Schema::table('assets', function (Blueprint $table) {
-            $table->dropUnique('assets_ledger_folio_unique');
+            $table->dropUnique('assets_ledger_folio_unique')->change();
         });
     }
 
@@ -26,7 +26,7 @@ class ChangeLedgerFolioToAssets extends Migration
     public function down()
     {
         Schema::table('assets', function (Blueprint $table) {
-            //
+            $table->string('ledger_folio')->unique();
         });
     }
 }
