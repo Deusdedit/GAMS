@@ -69,9 +69,9 @@
                                 <!-- </a> -->
                             </div>
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-sm{{$receiving->id}}">
+                                <!-- <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-sm{{$receiving->id}}">
                                     <i class="fas fa-trash-alt"></i>
-                                </button>
+                                </button> -->
                             </div>
                         </div>
                     </td>

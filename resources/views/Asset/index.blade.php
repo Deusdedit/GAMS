@@ -65,7 +65,7 @@
                                 <!-- </a> -->
                             </div>
                             <div class="col-md-3">
-                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-sm{{$asset->id}}">Delete</button>
+                                <!-- <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-sm{{$asset->id}}">Delete</button> -->
                                 
                             </div>
                             
