@@ -46,7 +46,7 @@
                     <td>
                         {{$receiving->receipt_vocher}}
                         &nbsp
-                        @if ( $receiving->reason != NULL )
+                        @if ( $receiving->reason != NULL && Auth::user()->role_id == '3')
                             <i class="fas fa-info-circle " style="color:green;" data-placement="top" title="{{$receiving->reason}}"></i>
                         @endif 
                     </td>
