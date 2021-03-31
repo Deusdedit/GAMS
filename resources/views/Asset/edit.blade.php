@@ -85,13 +85,19 @@
                                             </select>
                                         </div>
 
+                                        <div class="form-group">
+                                            <label for="AssetSerialId">Unit cost</label>
+                                            <input type="text" class="form-control" value="{{$assets->cost}}" id="AssetSerialId" placeholder="Enter asset serial number" name="cost">
+                                        </div>
+
+
                                     </div>
 
                                     <div class="col-6">
 
                                     <div class="form-group">
                                             <label for="AssetSerialId">Ledger Folio Number</label>
-                                            <input type="text" class="form-control" id="AssetSerialId" placeholder="Enter asset serial number" name="ledger_folio">
+                                            <input type="text" class="form-control" id="AssetSerialId" value="{{$assets->ledger_folio}}" placeholder="Enter asset serial number" name="ledger_folio">
                                         </div>
 
                                     <div class="form-group">
@@ -122,11 +128,7 @@
                                             <input type="text" class="form-control" id="activityId" placeholder="Enter Activity" value="{{$assets->activity}}" name="activity">
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="AssetSerialId">Unit cost</label>
-                                            <input type="text" class="form-control" id="AssetSerialId" placeholder="Enter asset serial number" name="cost">
-                                        </div>
-
+                 
                                         
                                     </div>   
                                 </div>    
