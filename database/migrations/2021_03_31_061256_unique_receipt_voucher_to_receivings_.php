@@ -26,7 +26,7 @@ class UniqueReceiptVoucherToReceivings extends Migration
     public function down()
     {
         Schema::table('receivings', function (Blueprint $table) {
-            $table->string('receipt_vocher')->nullable(false)->change();
+            $table->string('receipt_vocher')->nullable(false)->unique(false)->change();
         });
     }
 }
