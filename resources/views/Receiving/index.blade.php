@@ -30,13 +30,13 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Ledger Number</th>
+                    <!-- <th>Ledger Number</th> -->
                     <th>Receipt Voucher Number</th>
                     <th>Item</th>
                     <th>Quantity</th>
                     <th>Supplier</th>
                     <th>Condition</th>
-                    <th>Unit cost </th>
+                    <!-- <th>Unit cost </th> -->
                     <th>Total cost </th>
                     <th>Date </th>
                     <th>Action </th>
@@ -46,18 +46,16 @@
                   @foreach($receivings as $receiving)
                   <tr>
                     <td>
-                        {{$receiving->ledger_number}}
+                        {{$receiving->receipt_vocher}}
                         &nbsp
                         @if ( $receiving->reason != NULL )
                             <i class="fas fa-info-circle " style="color:green;" data-placement="top" title="{{$receiving->reason}}"></i>
                         @endif 
                     </td>
-                    <td>{{$receiving->receipt_vocher}}</td>
                     <td>{{$receiving->item}}</td>
                     <td>{{$receiving->quantity}}</td>
                     <td>{{$receiving->supplier}}</td>
                     <td>{{$receiving->condition}}</td>
-                    <td>{{ number_format($receiving->cost, 2, '.' , ',') }}</td>
                     <td>{{ number_format($receiving->total_cost, 2, '.' , ',') }}</td>
                     <td>{{$receiving->date}}</td>
                     <td>
