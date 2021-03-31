@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Receiving;
 use Auth;
+use DB;
 class ReceivingController extends Controller
 {
     /**
@@ -107,14 +108,15 @@ class ReceivingController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'receipt_vocher' => 'required|unique:receivings,receipt_vocher',
+            'receipt_vocher' => 'required',
             'quantity' => 'required',
             'item' => 'required',
             'supplier' => 'required',
         ]);
 
         $received = Receiving::find($id);
-        $received->receipt_vocher = $request['receipt_vocher'];
+        $received_receipt_voucher = $request['receipt_vocher'];
+
         $received->item = $request['item'];
         $received->quantity = $request['quantity'];
         $received->supplier = $request['supplier'];
@@ -122,6 +124,11 @@ class ReceivingController extends Controller
         $received->date = $request['date'];
         $received->total_cost = $request['total_cost'];
 
+        $available_reveiving = DB::table('receivings')->where('id', '!=', $id)
+                        ->where('receipt_vocher', $received_receipt_voucher)->count();
+        if($available_reveiving > 0){
+            return redirect()->route('receiving.edit', $id)->withErrors('Receipt voucher entered already exists.');
+        } 
         $received->save();
         // Receiving::whereId($id)->update($validatedData);
         activity()->log('Edited information of received item '.$request['item'].' on receipt number '.$request['receipt_vocher']);
