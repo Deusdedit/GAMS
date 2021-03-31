@@ -68,7 +68,7 @@
                                 </div>    
                             </div>
                             <div class="modal-footer justify-content-between">
-                                <button type="submit" class="btn btn-success">Edit item</button>
+                                <button type="submit" class="btn btn-success">Update Information</button>
                             </div>
                             
                         </div>

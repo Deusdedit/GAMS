@@ -64,7 +64,7 @@
                                 </div>    
                             </div>
                             <div class="modal-footer justify-content-between">
-                                <button type="submit" class="btn btn-success">Edit Driver Informations</button>
+                                <button type="submit" class="btn btn-success">Update Information</button>
                             </div>
                             
                         </div>

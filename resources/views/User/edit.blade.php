@@ -85,7 +85,7 @@
                             </div>
                             <div class="modal-footer justify-content-between">
                             <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-sm{{$user->id}}">Reset Password</button>
-                                <button type="submit" class="btn btn-success">Edit item</button>
+                                <button type="submit" class="btn btn-success">Update Information</button>
                             </div>
                             
                         </div>
