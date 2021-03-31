@@ -42,8 +42,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="ledgerNumberId">Ledger Number</label>
-                                            <input type="text" class="form-control" id="ledgerNumberId" placeholder="Enter ledger number" value="{{$received->ledger_number}}" name="ledger_number">
+                                            <label for="ledgerNumberId">Receipt Voucher Number</label>
+                                            <input type="text" class="form-control" id="ledgerNumberId" placeholder="Enter receipt voucher number" name="receipt_vocher" value="{{$received->receipt_vocher}}">
                                         </div>
 
                                         <div class="form-group">
@@ -71,12 +71,6 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="ledgerNumberId">Receipt Voucher Number</label>
-                                            <input type="text" class="form-control" id="ledgerNumberId" placeholder="Enter receipt voucher number" name="receipt_vocher" value="{{$received->receipt_vocher}}">
-                                        </div>
-                                        
-
-                                        <div class="form-group">
                                             <label>Condition</label>
                                             <select class="form-control select2" style="width: 100%;" name="condition" value="{{$received->condition}}">
                                                 <option value="{{$received->condition}}" selected="{{$received->condition}}" readonly>{{$received->condition}}</option>
@@ -85,18 +79,10 @@
                                                 <option value="Refurbished">Refurbished</option>
                                             </select>
                                         </div>
-                                        <div class="">
-                                            
-                                            <input type="checkbox" id="vatId" name="vat"  >
-                                            <label for="costId">VAT Inclusive</label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="costId">Unit Cost</label>
-                                            <input type="number" class="form-control" id="costId" placeholder="Enter item unit cost" value="{{$received->cost}}" name="cost" onkeyup="receiving()">
-                                        </div>
+                                        
                                         <div class="form-group">
                                             <label for="costId">Total Cost</label>
-                                            <input type="number" class="form-control" id="totalcostId" placeholder="Enter total cost" value="{{$received->total_cost}}" name="total_cost" readonly>
+                                            <input type="number" class="form-control" id="totalcostId" placeholder="Enter total cost" value="{{$received->total_cost}}" name="total_cost" >
                                         </div>
                                     </div>   
 
@@ -105,7 +91,7 @@
 
                             </div>
                             <div class="modal-footer justify-content-between">
-                                <button type="submit" class="btn btn-success">Edit item</button>
+                                <button type="submit" class="btn btn-success">Update Information</button>
                             </div>
                             
                         </div>

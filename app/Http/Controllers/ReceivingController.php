@@ -40,33 +40,24 @@ class ReceivingController extends Controller
     {
         
         $validatedData = $request->validate([
-            'ledger_number' => 'required',
+            'receipt_vocher' => 'required|unique:receivings,receipt_vocher',
             'quantity' => 'required',
-            'cost' => 'required',
             'item' => 'required',
             'supplier' => 'required',
-            'condition' => 'required',
-            'total_cost'=> 'required'
+            'condition' => 'required'
         ]);
          
         $received = new Receiving();
-        $received->ledger_number = $request['ledger_number'];
         $received->receipt_vocher = $request['receipt_vocher'];
         $received->item = $request['item'];
         $received->quantity = $request['quantity'];
-        $received->cost = $request['cost'];
         $received->supplier = $request['supplier'];
         $received->condition = $request['condition'];
         $received->date = $request['date'];
         $received->total_cost = $request['total_cost'];
         
-        $received_already = Receiving::where('ledger_number', $request['ledger_number'])->count();
-        if($received_already > 0){
-            return redirect()->route('receiving.index')->withErrors('Ledger number entered already exists.');
-        } else {
-            $received -> save();
-        }
-        activity()->log('Added information of received item '.$request['item'].' on ledger number '.$request['ledger_number']);
+        $received -> save();
+        activity()->log('Added information of received item '.$request['item'].' on receipt number '.$request['receipt_vocher']);
         return redirect()->route('receiving.index')->with('success','Receiving is successfully saved.');
     }
 
@@ -115,37 +106,25 @@ class ReceivingController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $validatedData = $request->validate([
-            'ledger_number' => 'required',
-            'receipt_vocher'=> 'required',
+            'receipt_vocher' => 'required|unique:receivings,receipt_vocher',
             'quantity' => 'required',
-            'cost' => 'required',
             'item' => 'required',
             'supplier' => 'required',
-           /*  'condition' => 'required', */
-            /* 'total_cost'=> 'required' */
         ]);
 
         $received = Receiving::find($id);
-        $received->ledger_number = $request['ledger_number'];
         $received->receipt_vocher = $request['receipt_vocher'];
         $received->item = $request['item'];
         $received->quantity = $request['quantity'];
-        $received->cost = $request['cost'];
         $received->supplier = $request['supplier'];
         $received->condition = $request['condition'];
         $received->date = $request['date'];
         $received->total_cost = $request['total_cost'];
 
-        // $receiv_condition = $request['condition'];
-        // if($receiv_condition != NULL){
-        //     $received->condition = $receiv_condition;
-        // }
         $received->save();
-        Receiving::whereId($id)->update($validatedData);
-        activity()->log('Edited information of received item '.$request['item'].' on ledger number '.$request['ledger_number']);
-
+        // Receiving::whereId($id)->update($validatedData);
+        activity()->log('Edited information of received item '.$request['item'].' on receipt number '.$request['receipt_vocher']);
         return redirect()->route('receiving.index')->with('success', 'Item Data updated successfully');
     }
 
