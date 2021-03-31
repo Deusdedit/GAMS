@@ -153,11 +153,11 @@
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="ledgerNumberId">Ledger Number</label>
-                                            <input type="text" class="form-control" id="ledgerNumberId" placeholder="Enter ledger number" name="ledger_number">
-                                        </div>
 
+                                        <div class="form-group">
+                                            <label for="ledgerNumberId">Receipt Voucher Number</label>
+                                            <input type="text" class="form-control" id="ledgerNumberId" placeholder="Enter receipt vocher number" name="receipt_vocher">
+                                        </div>
                                         <div class="form-group">
                                             <label for="itemNameId">Item Name</label>
                                             <input type="text" class="form-control" id="itemNameId" placeholder="Enter item name" name="item">
@@ -167,36 +167,15 @@
                                             <label for="quantityId">Quantity</label>
                                             <input type="number" class="form-control" id="quantityId" placeholder="Enter quantity" name="quantity" onkeyup="receiving()">
                                         </div>
-
-                                        <div class="">
-                                            
-                                            <input type="checkbox" id="vatId" name="vat"  >
-                                            <label for="costId">VAT Inclusive</label>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="costId">Unit Cost</label>
-                                            <input type="number" class="form-control" id="costId" placeholder="Enter unit cost" name="cost" onkeyup="receiving()" >
-                                        </div>
-
-                                        
-
-
                                     </div>
 
                                     <div class="col-6">
 
-                                    <div class="form-group">
+                                        <div class="form-group">
                                             <label for="costId">Date Received</label>
                                             <input type="date" class="form-control" id="costId" placeholder="Enter received date" name="date"  >
 
                                         </div>
-                                       
-                                        <div class="form-group">
-                                            <label for="ledgerNumberId">Receipt Voucher Number</label>
-                                            <input type="text" class="form-control" id="ledgerNumberId" placeholder="Enter receipt vocher number" name="receipt_vocher">
-                                        </div>
-                                        
 
                                         <div class="form-group">
                                             <label for="supplierId">Supplier Name</label>
@@ -214,7 +193,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="totalcostId">Total Cost</label>
-                                            <input type="number" class="form-control" id="totalcostId" placeholder="Enter total cost" name="total_cost" readonly>
+                                            <input type="number" class="form-control" id="totalcostId" placeholder="Enter total cost" name="total_cost">
                                         </div>
                                     </div>   
                                 </div>    
@@ -299,13 +278,13 @@ function receiving()
             });
             $('#receivingForm').validate({
             rules: {
-                    ledger_number: {
+                    receipt_vocher: {
                         required: true,
                     },
                     quantity: {
                         required: true,
                     },
-                    cost: {
+                    date: {
                         required: true,
                     },
                     item: {
@@ -317,39 +296,27 @@ function receiving()
                     condition: {
                         required: true,
                     },
-                    // password: {
-                    //     required: true,
-                    //     minlength: 5
-                    // },
-                    // terms: {
-                    //     required: true
-                    // },
             },
             messages: {
-                ledger_number: {
-                    required: "Please enter a ledger Number",
-                    ledger_number: "Please enter a vaild ledger Number"
+                receipt_vocher: {
+                    required: "Please enter a Receipt voucher Number",
+                    receipt_vocher: "Please enter a vaild Receipt voucher Number"
                 },
                 quantity: {
                         required: "Please enter quantity",
                 },
-                cost: {
-                    required: "Please enter cost",
+                date: {
+                    required: "Please enter received date",
                 },
                 item: {
                     required: "Please enter item",
                 },
                 supplier: {
-                    required: "Please enter supplier",
+                    required: "Please enter supplier name",
                 },
                 condition: {
-                    required: "Please select a condition",
+                    required: "Please select item condition",
                 },
-                // password: {
-                //     required: "Please provide a password",
-                //     minlength: "Your password must be at least 5 characters long"
-                // },
-                // terms: "Please accept our terms"
             },
                 errorElement: 'span',
                 errorPlacement: function (error, element) {
