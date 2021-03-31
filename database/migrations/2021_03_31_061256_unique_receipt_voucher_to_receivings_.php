@@ -1,13 +1,3 @@
-@extends('layouts.master')
-
-@section('content')
-
-composer require spatie/laravel-activitylog
-composer require barryvdh/laravel-dompdf
-composer require doctrine/dbal
-
-@stop
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -24,7 +14,7 @@ class UniqueReceiptVoucherToReceivings extends Migration
     public function up()
     {
         Schema::table('receivings', function (Blueprint $table) {
-            $table->string('receipt_vocher')->unique();
+            $table->string('receipt_vocher')->unique()->change();
         });
     }
 

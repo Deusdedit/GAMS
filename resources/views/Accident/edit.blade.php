@@ -94,7 +94,7 @@
 
                                     <div class="form-group">
                                             <label for="productionId">Number of Passenger involved</label>
-                                            <input type="number" class="form-control" id="passengerId" placeholder="Enter Number of Passenger" name="passenger" value="{{$acciden->passenger}}">
+                                            <input type="number" min="1" class="form-control" id="passengerId" placeholder="Enter Number of Passenger" name="passenger" value="{{$acciden->passenger}}">
                                         </div>
 
                                         <div class="form-group">
