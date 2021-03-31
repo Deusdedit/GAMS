@@ -66,12 +66,12 @@
                         @if(($receiving->id) == ($assets->receiving_id) )
                             <tr>
                                 <td><b>Item was received as</b></td>
-                                <td>{{$receiving->item}}</td>
+                                <td>{{ $receiving->item}}</td>
                             </tr>
                             
                             <tr>
                                 <td><b>Receiving cost was</b></td>
-                                <td>{{$receiving->cost}}</td>
+                                <td>{{ number_format($receiving->cost, 2, '.' , ',') }}</td>
                             </tr>
                         @endif
                     @endforeach

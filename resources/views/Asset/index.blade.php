@@ -321,14 +321,7 @@
     <script type="text/javascript">
 
         $(function () {
-            // $('.toastsDefaultSuccess').click(function() {
-            //     $(document).Toasts('create', {
-            //         class: 'bg-success', 
-            //         title: 'Toast Title',
-            //         subtitle: 'Subtitle',
-            //         body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-            //     })
-            // });
+           
             $(document).ready(function(){
             $('[class="fas fa-info-circle "]').tooltip();   
             });
