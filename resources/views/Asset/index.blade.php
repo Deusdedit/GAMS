@@ -379,6 +379,9 @@
                 location: {
                     required: true,
                 },
+                ledger_folio: {
+                    required: true,
+                },
                 activity: {
                     required: true,
                 },
