@@ -30,13 +30,11 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <!-- <th>Ledger Number</th> -->
                     <th>Receipt Voucher Number</th>
                     <th>Item</th>
                     <th>Quantity</th>
                     <th>Supplier</th>
                     <th>Condition</th>
-                    <!-- <th>Unit cost </th> -->
                     <th>Total cost </th>
                     <th>Date </th>
                     <th>Action </th>
@@ -56,9 +54,7 @@
                     <td>{{$receiving->quantity}}</td>
                     <td>{{$receiving->supplier}}</td>
                     <td>{{$receiving->condition}}</td>
-                    <td>{{ number_format($receiving->cost, 2, '.' , ',') }}</td>
                     <td style="text-align: right;">{{ number_format($receiving->total_cost, 2, '.' , ',') }}</td>
-                    <td>{{ number_format($receiving->total_cost, 2, '.' , ',') }}</td>
                     <td>{{$receiving->date}}</td>
                     <td>
                         <div class="row">
