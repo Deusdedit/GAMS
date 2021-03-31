@@ -69,10 +69,7 @@
                                 <td>{{ $receiving->item}}</td>
                             </tr>
                             
-                            <tr>
-                                <td><b>Receiving cost was</b></td>
-                                <td>{{ number_format($receiving->cost, 2, '.' , ',') }}</td>
-                            </tr>
+                            
                         @endif
                     @endforeach
                     
