@@ -14,14 +14,12 @@
          <table width="100%" border='1' style="width:100%; border-collapse:collapse" >
                   <thead>
                   <tr>
-                    <th>Ledger Number</th>
                     <th>Receipt Voucher Number</th>
                     <th>Received Item</th>
                     <th>Quantity</th>
                     <th>Supplier</th>
                     <th>Condition</th>
                     <th>Date received </th>
-                    <th>Unit cost </th>
                     <th>Total cost </th>
                     
                   </tr>
@@ -29,7 +27,6 @@
                   <tbody>
                   @foreach($receivings as $receiving)
                   <tr>
-                    <td>{{$receiving->ledger_number}}</td>
                     <td>{{$receiving->receipt_vocher}}</td>
                     <td>{{$receiving->item}}</td>
                     <td>{{$receiving->quantity}}</td>
@@ -37,7 +34,7 @@
                     <td>{{$receiving->condition}}</td>
                     <td>{{$receiving->date}}</td>
                     <td>{{ number_format($receiving->cost, 2, '.' , ',')}}</td>
-                    <td>{{ number_format($receiving->total_cost, 2, '.' , ',')}}</td>
+                    <td style="text-align: right;">{{ number_format($receiving->total_cost, 2, '.' , ',')}}</td>
                     
                   </tr>
 
