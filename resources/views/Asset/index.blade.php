@@ -379,6 +379,9 @@
                 location: {
                     required: true,
                 },
+                ledger_folio: {
+                    required: true,
+                },
                 activity: {
                     required: true,
                 },
@@ -409,6 +412,9 @@
                 },
                 activity: {
                     required: "Please select a activity",
+                },
+                ledger_folio: {
+                    required: "Please select a ledger folio number",
                 },
                 receiving_id: {
                     required: "Please choose received as",
