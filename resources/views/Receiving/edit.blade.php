@@ -147,14 +147,7 @@
                         required: true,
                     },
                 
-                    // password: {
-                    //     required: true,
-                    //     minlength: 5
-                    // },
-                    // terms: {
-                    //     required: true
-                    // },
-            },
+          
             messages: {
                 ledger_number: {
                     required: "Please enter a ledger Number",

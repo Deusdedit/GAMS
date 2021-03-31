@@ -56,6 +56,8 @@ class AssetController extends Controller
             'condition' => 'required',
             'receiving_id'=> 'required',
             'location' => 'required',
+            'ledger_folio' => 'required',
+            'cost' => 'required',
             'activity' => 'required',
             ]);
         } else{
@@ -64,6 +66,8 @@ class AssetController extends Controller
             'category' => 'required',
             'purchased_date' => 'required',
             'condition' => 'required',
+            'ledger_folio' => 'required',
+            'cost' => 'required',
             'location' => 'required',
             'activity' => 'required',
             ]);
@@ -76,6 +80,8 @@ class AssetController extends Controller
         $asseted->condition = $request['condition'];
         $asseted->serial_number = $request['serial_number'];
         $asseted->product_number = $request['product_number'];
+        $asseted->ledger_folio = $request['ledger_folio'];
+        $asseted->cost = $request['cost'];
         $asseted->location = $request['location'];
         $asseted->activity = $request['activity'];
         $asseted->receiving_id = $request['receiving_id'];

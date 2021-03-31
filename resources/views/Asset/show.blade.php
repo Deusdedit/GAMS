@@ -22,6 +22,10 @@
                     </tr>
                   </thead>
                   <tbody>
+                  <tr>
+                      <td><b>Ledger Folio Number</b></td>
+                      <td>{{$assets->ledger_folio}}</td>
+                    </tr>
                     <tr>
                       <td><b>Asset name</b></td>
                       <td>{{$assets->name}}</td>
@@ -53,6 +57,10 @@
                     <tr>
                       <td><b>Activity</b></td>
                       <td>{{$assets->activity}}</td>
+                    </tr>
+                    <tr>
+                      <td><b>Unit cost</b></td>
+                      <td>{{$assets->cost}}</td>
                     </tr>
                     @foreach($receivings as $receiving)
                         @if(($receiving->id) == ($assets->receiving_id) )
