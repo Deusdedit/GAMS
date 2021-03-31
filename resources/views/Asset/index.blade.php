@@ -50,21 +50,24 @@
                         <a href="{{ route('asset.show', $asset->id)}}" >
                             <u> {{$asset->ledger_folio}} </u>
                         </a>
+                        &nbsp
+                        @if ( $asset->reason != NULL && Auth::user()->role_id == '3')
+                            <i class="fas fa-info-circle " style="color:green;" data-placement="top" title="{{$asset->reason}}"></i>
+                        @endif
                     </td>
                     <td>{{$asset->name}}</td>
                     <td>{{$asset->purchased_date}}</td>
                     <td>{{$asset->condition}}</td>
                     <td>{{$asset->serial_number}}</td>
                     <td>
-                    
                         <div class="row">
 
-                        
                         @if ( Auth::user()->role_id == '5')
                             <div class="col-md-3">
+                                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-smm{{$asset->id}}">Edit</button>
                                 <!-- <a href="{{ route('asset.edit', $asset->id) }}"> -->
                                 <!-- <a href="{{ route('editReason', $asset->id) }}"> -->
-                                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-smm{{$asset->id}}">Edit</button>
+                                
                                 <!-- </a> -->
                             </div>
                             <div class="col-md-3">
@@ -76,10 +79,6 @@
                             
                             <div class="col-md-3">
                                 <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-lgg{{$asset->id}}">Dispose </button>
-                                @if ( $asset->reason != NULL )
-                                    <i class="fas fa-info-circle " style="color:green;" data-placement="top" title="{{$asset->reason}}"></i>
-                                @endif
-                                
                             </div>
                             
                             @endif

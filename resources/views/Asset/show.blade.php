@@ -68,6 +68,10 @@
                                 <td><b>Item was received as</b></td>
                                 <td>{{ $receiving->item}}</td>
                             </tr>
+                            <tr>
+                                <td><b>Receipt voucher number</b></td>
+                                <td>{{ $receiving->receipt_vocher}}</td>
+                            </tr>
                             
                             
                         @endif
