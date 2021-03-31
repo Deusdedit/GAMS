@@ -257,7 +257,7 @@
                                                 <option value="Furniture and fitting">Funiture and Fitings</option>
                                                 <option value=" office Equipments">Office Equipments</option>
                                                 <option value=" Vehicle">Vehicle</option>
-                                                <option value="Motor Bycle ">Motor Bycle</option>
+                                                <option value="Motor Bycle ">Motor Bike</option>
                                                 <option value="Goods">Goods</option>
                                             </select>
                                         </div>

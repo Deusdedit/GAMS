@@ -100,7 +100,8 @@
                                         <option value="{{$assets->category}}" selected="{{$assets->category}}" readonly>{{$assets->category}}</option>
                                                     <option value="Furniture and fitting">Funiture and Fitings</option>
                                                     <option value=" office Equipments">Office Equipments</option>
-                                                    <option value=" Vehicle and Motor Bike">Vehicle and Motor bike</option>
+                                                    <option value=" Vehicle and Motor Bike">Vehicle</option>
+                                                    <option value=" Vehicle and Motor Bike">Motor bike</option>
                                                     <option value="Goods">Goods</option>        
                                         </select>
                                         </div>
