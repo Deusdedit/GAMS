@@ -68,10 +68,7 @@
                                 <td><b>Item was received as</b></td>
                                 <td>{{$receiving->item}}</td>
                             </tr>
-                            <tr>
-                                <td><b>Receiving ledger number was</b></td>
-                                <td>{{$receiving->ledger_number}}</td>
-                            </tr>
+                            
                             <tr>
                                 <td><b>Receiving cost was</b></td>
                                 <td>{{$receiving->cost}}</td>
