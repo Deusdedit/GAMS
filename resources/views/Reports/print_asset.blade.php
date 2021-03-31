@@ -55,7 +55,7 @@
                 <td>
                     @foreach($receivings as $received)
                         @if($asset->receiving_id == $received->id)
-                            {{$received->cost}}
+                            {{ number_format($received->cost, 2, '.' , ',')}}
                         @endif
                     @endforeach
                 </td>                    

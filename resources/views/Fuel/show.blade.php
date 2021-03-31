@@ -64,7 +64,7 @@
                     </tr>
                     <tr>
                       <td><b>Fuel's cost + VAT</b></td>
-                      <td>{{$fuels->total_vat}}</td>
+                      <td>{{ number_format($fuels->total_vat, 2, '.' , ',') }}</td>
                     </tr>
                     
                     

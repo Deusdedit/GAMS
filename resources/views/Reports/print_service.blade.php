@@ -47,7 +47,7 @@
                               @endforeach
                             </td>
                             <td>{{$service->material}}</td>
-                            <td>{{$service->cost}}</td>
+                            <td>{{ number_format($service->cost, 2, '.' , ',')}}</td>
                             <td>{{$service->garage}}</td>
                             <td>{{$service->current_odometer}}</td>
                             <td>{{$service->next_odometer}}</td>

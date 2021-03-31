@@ -55,8 +55,8 @@
                             <td>{{$receiving->supplier}}</td>
                             <td>{{$receiving->condition}}</td>
                             <td>{{$receiving->date}}</td>
-                            <td>{{$receiving->cost}}</td>
-                            <td>{{$receiving->total_cost}}</td>
+                            <td>{{ number_format($receiving->cost, 2, '.' , ',') }}</td>
+                            <td>{{ number_format($receiving->total_cost, 2, '.' , ',') }}</td>
                         </tr>
                         @endforeach
                     </tbody>

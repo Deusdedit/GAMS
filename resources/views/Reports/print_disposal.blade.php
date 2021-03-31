@@ -46,7 +46,7 @@
                                     @endif
                                 @endforeach
                             </td>
-                            <td>{{$disposal->price}}</td>
+                            <td>{{ number_format($disposal->price, 2, '.' , ',') }}</td>
                             <td>{{$disposal->reason}}</td>
                             <td>{{$disposal->date}}</td>
                             
