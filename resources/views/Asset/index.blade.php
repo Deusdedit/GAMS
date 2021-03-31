@@ -218,6 +218,10 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                     <div class="form-group">
+                                            <label for="AssetSerialId">Ledger Folio Number</label>
+                                            <input type="text" class="form-control" id="AssetSerialId" placeholder="Enter asset serial number" name="ledger_folio">
+                                        </div>
+                                    <div class="form-group">
                                             <label>Asset condition</label>
                                             <select class="form-control select2" style="width: 100%;" name="condition">
                                                 <option selected="selected" disabled>Select a condition...</option>
@@ -253,7 +257,7 @@
                                                 <option value="Furniture and fitting">Funiture and Fitings</option>
                                                 <option value=" office Equipments">Office Equipments</option>
                                                 <option value=" Vehicle">Vehicle</option>
-                                                <option value="Motor Bycle ">Motor Bycle</option>
+                                                <option value="Motor Bycle ">Motor Bike</option>
                                                 <option value="Goods">Goods</option>
                                             </select>
                                         </div>
@@ -271,6 +275,10 @@
                                         <div class="form-group">
                                             <label for="activityId">Activity</label>
                                             <input type="text" class="form-control" id="activityId" placeholder="Enter Activity" name="activity" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="AssetSerialId">Unit cost</label>
+                                            <input type="text" class="form-control" id="AssetSerialId" placeholder="Enter asset serial number" name="cost">
                                         </div>
                                         
                                     </div>   

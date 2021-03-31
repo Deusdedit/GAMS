@@ -452,12 +452,6 @@
                                             <input type="text" class="form-control" id="txtvatfuel" placeholder="Enter Fuel cost + VAT " name="total_vat" readonly>
                                             
                                         </div>
-
-
-                                        
-
-
-
                                     </div>
                                 </div>
                             </div>
