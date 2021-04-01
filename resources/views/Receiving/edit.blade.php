@@ -42,23 +42,23 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="ledgerNumberId">Receipt Voucher Number</label>
+                                            <label for="ledgerNumberId">Receipt Voucher Number  <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="text" class="form-control" id="ledgerNumberId" placeholder="Enter receipt voucher number" name="receipt_vocher" value="{{$received->receipt_vocher}}">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="itemNameId">Item Name</label>
+                                            <label for="itemNameId">Item Name  <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="text" class="form-control" id="itemNameId" placeholder="Enter item name" value="{{$received->item }}" name="item">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="quantityId">Quantity</label>
+                                            <label for="quantityId">Quantity  <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="number" class="form-control" id="quantityId" placeholder="Enter quantity" value="{{$received->quantity}}" name="quantity" onkeyup="receiving()">
                                         </div>
 
                                         
                                         <div class="form-group">
-                                            <label for="costId">Date received</label>
+                                            <label for="costId">Date received  <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="date" class="form-control" id="dateId" placeholder="Enter date received" value="{{$received->date}}" name="date">
                                         </div>
                                       
@@ -66,12 +66,12 @@
 
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="supplierId">Supplier Name</label>
+                                            <label for="supplierId">Supplier Name  <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="text" class="form-control" id="supplierId" placeholder="Enter Suppliers name" value="{{$received->supplier}}" name="supplier">
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Condition</label>
+                                            <label>Condition  <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <select class="form-control select2" style="width: 100%;" name="condition" value="{{$received->condition}}">
                                                 <option value="{{$received->condition}}" selected="{{$received->condition}}" readonly>{{$received->condition}}</option>
                                                 <option value="New">New</option>

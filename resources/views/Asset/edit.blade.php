@@ -43,7 +43,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="AssetName">Asset name</label>
+                                            <label for="AssetName">Asset name <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="text" class="form-control" id="assetNameId" placeholder="Enter Asset name" value="{{$assets->name}}" name="name">
                                         </div>
 
@@ -53,12 +53,12 @@
                                         </div>
 
                                         <div class="form-group"> 
-                                            <label for="quantityId">Date bought</label>
+                                            <label for="quantityId">Date bought <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="date" class="form-control" id="quantityId" placeholder="Enter Date Bought" value="{{$assets->purchased_date}}" name="purchased_date">
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Condition</label>
+                                            <label>Condition <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <select class="form-control select2" style="width: 100%;" name="condition" value="{{$assets->condition}}">
                                                 <option value="{{$assets->condition}}" selected="{{$assets->condition}}" disabled>{{$assets->condition}}</option>
                                                 <option value="New">New</option>
@@ -86,7 +86,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="AssetSerialId">Unit cost</label>
+                                            <label for="AssetSerialId">Unit cost <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="text" class="form-control" value="{{$assets->cost}}" id="AssetSerialId" placeholder="Enter asset serial number" name="cost">
                                         </div>
 
@@ -96,12 +96,12 @@
                                     <div class="col-6">
 
                                     <div class="form-group">
-                                            <label for="AssetSerialId">Ledger Folio Number</label>
+                                            <label for="AssetSerialId">Ledger Folio Number <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="text" class="form-control" id="AssetSerialId" value="{{$assets->ledger_folio}}" placeholder="Enter asset serial number" name="ledger_folio">
                                         </div>
 
                                     <div class="form-group">
-                                        <label>Category</label>
+                                        <label>Category <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                         <select class="form-control select2" style="width: 100%;" name="category" value="{{$assets->category}}">
                                         <option value="{{$assets->category}}" selected="{{$assets->category}}" readonly>{{$assets->category}}</option>
                                                     <option value="Furniture and fitting">Funiture and Fitings</option>
@@ -119,12 +119,12 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="supplierId">Location</label>
+                                            <label for="supplierId">Location <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="text" class="form-control" id="locationId" placeholder="Enter Location" value="{{$assets->location}}" name="location">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="supplierId">Activity</label>
+                                            <label for="supplierId">Activity <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                             <input type="text" class="form-control" id="activityId" placeholder="Enter Activity" value="{{$assets->activity}}" name="activity">
                                         </div>
 
