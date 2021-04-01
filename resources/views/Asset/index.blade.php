@@ -161,7 +161,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="assetNameId">Asset name */</label>
+                                                    <label for="assetNameId">Asset name <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                                     <input type="text" class="form-control" id="assetNameId" value="{{$asset->id}}" name="asset_id" hidden >
                                                     <input type="text" class="form-control" id="assetNameId" value="{{$asset->name}}" disabled >
                                                 </div>
@@ -169,19 +169,19 @@
                                                
 
                                                 <div class="form-group">
-                                                    <label for="dateId">Reason */</label>
+                                                    <label for="dateId">Reason <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                                     <input type="text" class="form-control" id="statusId" placeholder="Enter Reason" name="reason">
                                                 </div>
                                             </div>
 
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label for="dateId">Disposal Date */</label>
+                                                    <label for="dateId">Disposal Date <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                                     <input type="date" class="form-control" id="disposalId" placeholder="Enter Disposal Date" name="date">
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="dateId">Price */</label>
+                                                    <label for="dateId">Price <sup><i class="fa fa-asterisk" style="font-size:6px;color:red"></i></sup></label>
                                                     <input type="number" min="0" class="form-control" id="assetId" placeholder="Enter Asset price" name="price">
                                                 </div>
                                             </div>   
