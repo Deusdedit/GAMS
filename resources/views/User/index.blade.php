@@ -101,68 +101,9 @@
                         </div>
                     </div>
 
-                    <!-- activate modal -->
-                    <div class="modal fade" id="modal-activate{{$user->id}}">
-                        <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
-                                <div class="modal-header bg-success">
-                                    <h4 class="modal-title">Activating {{$user->first_name}} {{$user->last_name}} </h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Are you sure you want to activate <b> {{$user->first_name}} {{$user->middle_name}} {{$user->last_name}} </b> </p>
-                                </div>
-                                <div class="modal-footer justify-content-between">
-                                    
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                                    <form action="{{ route('activate.update', $user->id )}}" method="post">
-                                        @csrf
-                                        @method('PATCH')
-                                        <input type="number" class="form-control" id="assetNameId" placeholder="Enter Last name" value="1" name="getvalue" hidden>
-                                        <button type="submit" class="btn btn-success">Yes</button>
-                                    </form>
-                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  
 
-                    <!-- deactivate modal -->
-                    <div class="modal fade" id="modal-deactivate{{$user->id}}">
-                        <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
-                                <div class="modal-header bg-warning">
-                                    <h4 class="modal-title">Deactivating {{$user->first_name}} {{$user->last_name}} </h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Are you sure you want to deactivate <b> {{$user->first_name}} {{$user->middle_name}} {{$user->last_name}} </b> </p>
-                                </div>
-                                <div class="modal-footer justify-content-between">
-                                    
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                                    <form action="{{ route('activate.update', $user->id )}}" method="post">
-                                        @csrf
-                                        @method('PATCH')
-                                        <input type="number" class="form-control" id="assetNameId" placeholder="Enter Last name" value="2" name="getvalue" hidden>
-                                        <button type="submit" class="btn btn-warning">Yes</button>
-                                    </form>
-                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                  @endforeach
-                  </tbody>
-                </table>
-              </div>
-            </div>
+                 
 
             <!-- create new User modal -->
             <div class="modal fade" id="modal-NewUser">
