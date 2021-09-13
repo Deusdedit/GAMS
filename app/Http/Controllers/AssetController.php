@@ -153,6 +153,7 @@ class AssetController extends Controller
             'product_number' => 'required',
             'location' => 'required',
             'activity' => 'required',
+            'cost' => 'required',
         ]);
 
         $asseted = Asset::find($id);
@@ -168,6 +169,7 @@ class AssetController extends Controller
         $asseted->location = $request['location'];
         $asseted->activity = $request['activity'];
         $asset_reciving_id = $request['receiving_id'];
+        $asseted->cost=$request['cost'];
         
         if($asset_condition !=NULL){
             $asseted->condition =$asset_condition;
@@ -177,7 +179,7 @@ class AssetController extends Controller
         }
 
 
-        
+    
         $asseted->user_id = Auth::user()->id;
         $asseted->save();
         activity()->log('Edited asset  '.$request['name'].' serial number '.$request['serial_number']);
