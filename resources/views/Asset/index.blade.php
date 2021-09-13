@@ -50,7 +50,7 @@
                         <a href="{{ route('asset.show', $asset->id)}}" >
                             <u> {{$asset->ledger_folio}} </u>
                         </a>
-                        &nbsp
+                        &nbsp;
                         @if ( $asset->reason != NULL && Auth::user()->role_id == '3')
                             <i class="fas fa-info-circle " style="color:green;" data-placement="top" title="{{$asset->reason}}"></i>
                         @endif
