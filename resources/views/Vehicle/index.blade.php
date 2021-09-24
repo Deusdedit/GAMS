@@ -132,10 +132,7 @@
                                                     <label for="dateId">Material Used </label>
                                                     <input type="text" class="form-control" id="dateId" placeholder="Enter material used" name="material">
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="dateId">Maintenance Receipt</label>
-                                                     <input type="file" class="form-control" id="fuelId" placeholder="Enter Maintenance Attachments " name="attachments">
-                                                   </div>
+                                                
 
                                             </div>
 
@@ -156,21 +153,20 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="locationId">Cost</label>
+                                                    <label for="locationId">Total Cost</label>
                                                     <input type="number" class="form-control" id="txtcost" placeholder="Enter maitenance cost" name="cost" onkeyup="sum()" >
                                                 </div>
-                                                <div class="form-group">  
-                                                <label for="locationId">Total Cost + VAT</label>            
-                                                   
-                                                  <input type="number" class="form-control" id="txtresult" placeholder="Enter total cost" name="total_vat" readonly >
-                                            
-                                                     </div>
 
-
-                                                               
-
-                                                            
+                                                <div class="form-group">
+                                                    <label for="dateId">Maintenance Receipt</label>
+                                                     <input type="file" class="form-control" id="fuelId" placeholder="Enter Maintenance Attachments " name="attachments">
+                                                </div>
+                                                <!-- <div class="form-group">  
+                                                    <label for="locationId">Total Cost + VAT</label>            
+                                                    
+                                                    <input type="number" class="form-control" id="txtresult" placeholder="Enter total cost" name="total_vat" readonly >
                                                 
+                                                </div>  -->  
                                             </div>
                                         </div>
                                     </div>
@@ -230,10 +226,7 @@
                                             <input type="text" class="form-control" id="odometerId" placeholder="Enter service material" name="material">
                                         </div>
 
-                                        <div class="form-group">
-                                                    <label for="dateId">Service's Receipt</label>
-                                                     <input type="file" class="form-control" id="fuelId" placeholder="Enter services Attachments " name="attachments">
-                                          </div>
+                                       
 
 
                                             </div>
@@ -255,13 +248,18 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="locationId">Cost</label>
+                                                    <label for="locationId">Total Cost</label>
                                                     <input type="number" class="form-control" id="txtcosts" placeholder="Enter maitenance cost" name="cost" onkeyup="sumservice()">
                                                 </div>
+
                                                 <div class="form-group">
+                                                    <label for="dateId">Service's Receipt</label>
+                                                     <input type="file" class="form-control" id="fuelId" placeholder="Enter services Attachments " name="attachments">
+                                               </div>
+                                               <!--  <div class="form-group">
                                                     <label for="locationId">Total VAT</label>
                                                     <input type="number" class="form-control" id="txtresults" placeholder="Enter total VAT" name="total_vat" readonly>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                         
@@ -443,15 +441,15 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="dateId">Fuel's cost</label>
+                                            <label for="dateId">Fuel's  Total cost</label>
                                             <input type="text" class="form-control" id="txtcostfuel" placeholder="Enter Fuel cost " name="cost" onkeyup="sumfuel()">
                                         </div>
 
-                                        <div class="form-group">
+                                       <!--  <div class="form-group">
                                             <label for="txtvatfuel">Fuel cost + VAT</label>
                                             <input type="text" class="form-control" id="txtvatfuel" placeholder="Enter Fuel cost + VAT " name="total_vat" readonly>
                                             
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -832,7 +830,7 @@
         });
     });
     </script>
-    <script>
+   <!--  <script>
     function sum()
     {
         var textcost = document.getElementById('txtcost').value;
@@ -866,6 +864,6 @@
         }
     }
 
-    </script>
+    </script> -->
 
 @endsection
