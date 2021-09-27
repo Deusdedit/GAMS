@@ -63,13 +63,6 @@
                                             <input type="text" class="form-control" id="fuelId" placeholder="Enter Fuel activity " name="activity" value="{{$fuel->activity}}"  >
                                         </div>
 
-                                        <div class="form-group">
-                                                    <label for="dateId">Fuel Receipt</label>
-                                                     <input type="file" class="form-control" id="fuelId" placeholder="Enter Maintenance Receipt " name="attachments" value="{{$fuel->attachments}}">
-                                         </div>
-
-                                         
-                                       
                                     </div>
 
                                     <div class="col-6">
@@ -89,20 +82,17 @@
                                             <input type="text" class="form-control" id="textcost" placeholder="Enter Fuel activity " name="cost" value="{{$fuel->cost}}" onkeyup="sumfuel()"  >
                                         </div>
 
+                                        
                                         <div class="form-group">
+                                            <label for="dateId">Fuel Receipt</label>
+                                             <input type="file" class="form-control" id="fuelId" placeholder="Enter Maintenance Receipt " name="attachments" value="{{$fuel->attachments}}">
+                                         </div>
+
+                                        <!-- <div class="form-group">
                                             <label for="dateId">Fuel cost + VAT</label>
                                             <input type="text" class="form-control" id="texttotal" placeholder="Enter Total VAT " name="total_vat" value="{{$fuel->total_vat}}" readonly >
-                                        </div>
+                                        </div> -->
 
-                                        
-
-                                       
-
-
-
-                                        
-
-                                        
                                     </div>   
                                 </div>
                             <div class="modal-footer justify-content-between">
@@ -202,7 +192,7 @@
     });
     </script>
 
-    <script>
+  <!--   <script>
      function sumfuel()
     {
         var textcost1 = document.getElementById('textcost').value;
@@ -214,6 +204,6 @@
         }
     }
 
-    </script>
+    </script> -->
     
 @endsection

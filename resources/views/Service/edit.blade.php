@@ -96,17 +96,19 @@
                                             <label for="dateId">Cost</label>
                                             <input type="number" class="form-control" id="costId" placeholder="Enter Asset cost" value="{{$serviced->cost}}" name="cost" onkeyup="sumsev()" >
                                         </div>
+
                                         <div class="form-group">
+                                            <label for="locationId">Material</label>
+                                            <input type="text" class="form-control" id="odometerId" placeholder="Enter service material" value="{{$serviced->material}}" name="material">
+                                        </div>
+                                       <!--  <div class="form-group">
                                             <label for="dateId">Total Cost + VAT</label>
                                             <input type="number" class="form-control" id="totalId" placeholder="Enter total VAT" value="{{$serviced->total_vat}}" name="total_vat" >
-                                        </div>
+                                        </div> -->
                                         
                                     </div>   
                                 </div>    
-                                <div class="row">
-                                    <label for="locationId">Material</label>
-                                    <input type="text" class="form-control" id="odometerId" placeholder="Enter service material" value="{{$serviced->material}}" name="material">
-                                </div>
+                               
                             </div>
                             <div class="modal-footer justify-content-between">
                                 <button type="submit" class="btn btn-success">Update Information</button>
@@ -225,7 +227,7 @@
     }
     </script>
 
-<script>
+<!-- <script>
      function sumsev()
     {
         var textcost1 = document.getElementById('costId').value;
@@ -237,6 +239,6 @@
         }
     }
 
-    </script>
+    </script> -->
     
 @endsection

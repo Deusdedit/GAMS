@@ -75,10 +75,7 @@
                                                     <input type="text" class="form-control" id="dateId" placeholder="Enter material used" value="{{$mainted->material}}" name="material">
                                                 </div>
 
-                                                <div class="form-group">
-                                                    <label for="dateId">Maintenance receipt </label>
-                                                    <input type="file" class="form-control" id="dateId" placeholder="Enter maintenance receipt" value="{{$mainted->attachments}}" name="attachments">
-                                                </div>
+                                                
 
                                     </div>
 
@@ -100,10 +97,15 @@
                                             <label for="dateId">Total Cost</label>
                                             <input type="number" class="form-control" id="txtcost" placeholder="Enter Asset cost" value="{{$mainted->cost}}" name="cost" onkeyup="summain()"  >
                                         </div>
+
                                         <div class="form-group">
+                                                    <label for="dateId">Maintenance receipt </label>
+                                                    <input type="file" class="form-control" id="dateId" placeholder="Enter maintenance receipt" value="{{$mainted->attachments}}" name="attachments">
+                                                </div>
+                                        <!-- <div class="form-group">
                                                     <label for="locationId">Total Cost + VAT</label>
                                                     <input type="number" class="form-control" id="txttotal" placeholder="Enter total cost" value="{{$mainted->total_vat}}" name="total_vat">
-                                                </div>
+                                                </div> -->
                                         
                                     </div>   
                                 </div>    
@@ -206,7 +208,7 @@
     });
     </script>
 
-<script>
+<!-- <script>
      function summain()
     {
         var textcost1 = document.getElementById('txtcost').value;
@@ -218,6 +220,6 @@
         }
     }
 
-    </script>
+    </script> -->
     
 @endsection
