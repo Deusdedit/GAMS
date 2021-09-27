@@ -28,11 +28,11 @@
                   <thead>
                   <tr>
                     <th>Asset name</th>
-                    <th></th>
+                    <th>Model</th>
                     <th>Date</th>
                     <th>Current Odometer </th>
                     <th>Cost </th>
-                    <th>Total VAT</th>
+                    <!-- <th>Total VAT</th> -->
                     <th>Action </th>
                   </tr>
                   </thead>
@@ -63,7 +63,7 @@
                     <td>{{$service->date}}</td>
                     <td>{{$service->current_odometer}}</td>
                     <td>{{$service->cost}}</td>
-                    <td>{{$service->total_vat}}</td>
+                    <!-- <td>{{$service->total_vat}}</td> -->
                     <td>
                         <a href="{{ route('service.edit', $service->id) }}">
                             <button type="button" class="btn btn-success btn-sm" >Edit</button>

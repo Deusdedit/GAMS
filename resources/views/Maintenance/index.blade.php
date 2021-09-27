@@ -31,11 +31,11 @@
                   <thead>
                   <tr>
                     <th>Asset name</th>
-                    <th></th>
+                    <th>Model</th>
                     <th>Date</th>
                     <th>Current Odometer </th>
                     <th>Cost </th>
-                    <th>Total VAT </th>
+                    <!-- <th>Total VAT </th> -->
                     <th>material </th>
                     <th>Action </th>
                   </tr>
@@ -67,7 +67,7 @@
                     <td>{{$maintenance->date}}</td>
                     <td>{{$maintenance->current_odometer}}</td>
                     <td>{{$maintenance->cost}}</td>
-                    <td>{{$maintenance->total_vat}}</td>
+                   <!--  <td>{{$maintenance->total_vat}}</td> -->
                     <td>{{$maintenance->material}}</td>
                     
                     <td>

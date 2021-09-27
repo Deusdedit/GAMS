@@ -31,10 +31,11 @@
                   <thead>
                   <tr>
                     <th>Asset name</th>
-                    <th></th>
+                    <th>Model</th>
                     <th>Previous Odometer</th>
                     <th>Current Odometer </th>
                     <th>Activity</th>
+                    <th>Cost</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -65,6 +66,7 @@
                     <td>{{$fuel->previous_odometer}}</td>
                     <td>{{$fuel->current_odometer}}</td>
                     <td>{{$fuel->activity}}</td>
+                    <td>{{$fuel->cost}}</td>
                     <td>
                         <a href="{{ route('fuel.edit', $fuel->id) }}">
                             <button type="button" class="btn btn-success btn-sm" >Edit</button>
